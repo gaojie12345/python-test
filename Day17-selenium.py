@@ -1,9 +1,11 @@
 # 02-05
 from selenium import webdriver
 from selenium.webdriver.common.by import By
+from selenium.webdriver.chrome.service import Service
 
 # 创建Chrome浏览器对象
-browser = webdriver.Chrome()
+driver_path =Service(r'D:\python项目\firstDemo\chromedriver.exe')
+browser = webdriver.Chrome(service=driver_path)
 # 加载指定的页面
 browser.get('https://www.baidu.com')
 
